@@ -7,7 +7,9 @@
  --dark-violet: hsl(278, 68%, 11%);
  --font-size: 1rem;
  --font-sm: 0.8rem;
- 
+ --shadow-1:  rgba(8, 8, 8, 0.201) 0px 8px 24px;
+ --shadow-2: rgba(8, 8, 8, 0.201) 0px 10px 50px;
+ --error: hsl(0, 100%, 66%);
 }
 
 *,*::after,*::before{
@@ -15,11 +17,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+::placeholder{
+    color: var(--light-gray-violet);
+}
 body{
     width: 100%;
     min-height: 100%;
     background-color: var(--white);
+    
+}
+  small{
+    color: var(--error);
+    margin-top: 1px;
+  }
+button{
+    background-color: var(--dark-violet);
+    border: none;
+    outline: none;
+    padding: 0.9rem ;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: var(--font-size);
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+
 }
 
 .image-bg{
@@ -47,15 +69,79 @@ main .front-card {
     position: relative;
     transform: translateX(150px);
     margin-bottom: 1.7rem;
+    width: max-content;
+    
+   
 }
 main .back-card {
     position: relative;
     transform: translateX(250px);
-    margin-bottom: 1.7rem;
+    width: max-content;
+}
+main .front-card img, main .back-card img {
+    box-shadow: var(--shadow-2);
+    border-radius: 10px;
 }
 
 main .form-container{
-    /* transform: translate(250px,80px); */
+    max-width: 350px;
 }
 
+form {
+    width: 100%;
+    max-height: fit-content;
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+}
+
+form .input {
+    display: flex;
+    flex-direction: column;
+}
+
+form .input label {
+    color: var(--dark-violet);
+    font-size: var(--font-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-block-end: 3px;
+}
+
+form .input input {
+    width: 100%;
+    height: 38px;
+    outline: none;
+    padding: 0.3rem;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-color: var(--light-gray-violet);
+    transition: border-color 200ms ease-in;
+}
+
+form .input input:focus{
+    border-color: var(--linear-grad-right);
+}
+
+form .input input.error{
+    border-color: var(--error);
+}
+
+form .cvc-expdate{
+    width: 100%;
+    display: flex;
+    gap: 0.6rem;
+}
+
+form .cvc-expdate .expdate{
+    width: 50%;
+}
+
+form .cvc-expdate .container{
+    display: flex;
+    gap: 0.4rem;
+}
 
