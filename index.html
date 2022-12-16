@@ -22,14 +22,40 @@
       <div class="front-card">
         <img src="images/bg-card-front.png" alt="">
       </div>
-      <img src="./images/bg-card-back.png" alt="" class="back-card">
-    </div>
-    <div class="form-cotainer">
-      <div class="input">
-        <label for="">
-          
-        </label>
+      <div class="back-card">
+        <img src="./images/bg-card-back.png" alt="" >
       </div>
+    </div>
+    <div class="form-container">
+      <form >
+        <div class="input">
+          <label for="card-name">cardholder name</label>
+          <input type="text" placeholder="eg. Jane Appleseed" id="card-name">
+        </div>
+        <div class="input">
+          <label for="card-number">card number</label>
+          <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="eg. 0000 1234 0000 1234" id="card-number">
+        </div>
+        <div class="cvc-expdate">
+          <div class="expdate">
+            <div class="input">
+              <label for="exp-mon">card number</label>
+              <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="eg. 0000 1234 0000 1234" id="exp-mon">
+            </div>
+            <div class="input">
+              <label for="exp-yr">card number</label>
+              <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="eg. 0000 1234 0000 1234" id="exp-yr">
+            </div>
+          </div>
+          <div class="cvc">
+            <div class="input">
+              <label for="card-cvc">card number</label>
+              <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="eg. 0000 1234 0000 1234" id="card-cvc">
+            </div>
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
     </div>
   </main>
   

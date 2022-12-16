@@ -27,12 +27,35 @@ body{
     left: 0;
     bottom: 0;
     top: 0;
-    min-width: 350px;
+    width: 450px;
     z-index: -1;
 }
 .image-bg img {
     width: 100%;
     height: 100%;
+}
+
+main{
+    display: flex;
+    transform: translateY(95px);
+    gap: 18rem;
+    justify-content: start;
+    align-items: center;
+}
+
+main .front-card {
+    position: relative;
+    transform: translateX(150px);
+    margin-bottom: 1.7rem;
+}
+main .back-card {
+    position: relative;
+    transform: translateX(250px);
+    margin-bottom: 1.7rem;
+}
+
+main .form-container{
+    /* transform: translate(250px,80px); */
 }
 
 
